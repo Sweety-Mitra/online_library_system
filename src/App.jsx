@@ -3,9 +3,12 @@ import BrowseBooks from "./pages/BrowseBooks";
 import BookDetails from "./pages/BookDetails";
 import AddBook from "./pages/AddBook";
 import NotFound from "./pages/NotFound";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
+    <>
+    <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/books" element={<BrowseBooks />} />
@@ -13,5 +16,7 @@ export default function App() {
       <Route path="/add-book" element={<AddBook />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </>
+    
   );
 }
