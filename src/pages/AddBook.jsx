@@ -69,7 +69,7 @@ export default function AddBook() {
     };
 
     dispatch( addBook( newBook ) );
-    navigate( "/" ); // redirect to home page
+    navigate( "/books" ); // redirect to Browse Books page
   };
 
   return (

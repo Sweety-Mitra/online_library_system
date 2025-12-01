@@ -1,3 +1,15 @@
+## 🔗 GitHub Repository
+
+    https://github.com/Sweety-Mitra/online_library_system
+
+---
+
+## 🔗 Live Demo
+
+    https://demo-online-library-system-azure.vercel.app/
+
+---
+
 # Online Library System – React + Vite
 
 The project is an Online Library System which includes browsing books, searching, filtering by category, viewing book details, adding new books using Redux Toolkit, and handling 404 routes.
