@@ -46,47 +46,66 @@ export default function AddBook() {
     };
 
     dispatch(addBook(newBook));
-    // After submission, redirect to /books (Browse Books). New book is at beginning.
     navigate("/books");
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>Add a New Book</h2>
       <form className="form" onSubmit={handleSubmit} noValidate>
         <label>
           Title
-          <input value={form.title} onChange={(e)=>setForm({...form, title: e.target.value})} />
+          <input
+            value={form.title}
+            onChange={(e) => setForm({ ...form, title: e.target.value })}
+          />
           {errors.title && <small className="error">{errors.title}</small>}
         </label>
 
         <label>
           Author
-          <input value={form.author} onChange={(e)=>setForm({...form, author: e.target.value})} />
+          <input
+            value={form.author}
+            onChange={(e) => setForm({ ...form, author: e.target.value })}
+          />
           {errors.author && <small className="error">{errors.author}</small>}
         </label>
 
         <label>
           Category
-          <input value={form.category} onChange={(e)=>setForm({...form, category: e.target.value})} placeholder="e.g., Fiction" />
+          <input
+            value={form.category}
+            onChange={(e) => setForm({ ...form, category: e.target.value })}
+            placeholder="e.g., Fiction"
+          />
           {errors.category && <small className="error">{errors.category}</small>}
         </label>
 
         <label>
           Description
-          <textarea value={form.description} onChange={(e)=>setForm({...form, description: e.target.value})} />
+          <textarea
+            value={form.description}
+            onChange={(e) => setForm({ ...form, description: e.target.value })}
+          />
           {errors.description && <small className="error">{errors.description}</small>}
         </label>
 
         <label>
           Rating (0 - 5)
-          <input value={form.rating} onChange={(e)=>setForm({...form, rating: e.target.value})} />
+          <input
+            value={form.rating}
+            onChange={(e) => setForm({ ...form, rating: e.target.value })}
+          />
           {errors.rating && <small className="error">{errors.rating}</small>}
         </label>
 
         <div className="form-actions">
-          <button type="submit" className="btn">Add Book</button>
-          <button type="button" className="btn ghost" onClick={()=>navigate(-1)}>Cancel</button>
+          <button type="submit" className="btn">
+            Add Book
+          </button>
+          <button type="button" className="btn ghost" onClick={() => navigate(-1)}>
+            Cancel
+          </button>
         </div>
       </form>
     </div>
